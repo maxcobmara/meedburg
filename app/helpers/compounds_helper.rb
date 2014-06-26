@@ -1,0 +1,2 @@
+module CompoundsHelper
+end

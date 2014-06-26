@@ -1,0 +1,64 @@
+= form_for(@compound, :html => { :class => 'form-horizontal' }) do |f|
+  - if @compound.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@compound.errors.count, "error")
+        prohibited this compound from being saved:
+      %ul
+        - @compound.errors.full_messages.each do |message|
+          %li= message
+          
+  .row
+    .col-md-offset-1
+      .form-group
+        %label.col-sm-2.control-label= f.label :compound_code
+        .col-md-3
+          = f.text_field :compound_code, class: 'form-control mandatory'
+      
+      .form-group
+        %label.col-sm-2.control-label= f.label :issued_at
+        .col-md-4
+          = f.text_field :issued_at, class: 'form-control date_time_picker'
+          
+      .form-group
+        %label.col-sm-2.control-label= f.label :location
+        .col-md-5
+          = f.text_field :location, class: 'form-control'
+      
+      .form-group
+        %label.col-sm-2.control-label= f.label :compound_type
+        .col-md-3
+          = f.select :compound_type, options_for_select(['Vehicle', "Premise", 'Person']), {}, class: 'form-control select-picker'
+          
+      .form-group
+        %label.col-sm-2.control-label= f.label :customer_id
+        .col-md-3
+          = f.collection_select :customer_id, Customer.all, :id, :name, {}, class: 'form-control select-picker'
+          
+      .form-group
+        %label.col-sm-2.control-label= f.label :amount
+        .col-md-3
+          .input-group
+            .input-group-addon $
+            = f.text_field :amount, class: 'form-control mandatory'
+            
+      .form-group
+        %label.col-sm-2.control-label= f.label :compound_date, "Pay By"
+        .col-md-4
+          = f.text_field :compound_date, class: 'form-control date_time_picker'
+          
+      .form-group
+        %label.col-sm-2.control-label= f.label :description
+        .col-md-7
+          = f.text_area :description, class: 'form-control'
+          
+      .form-group
+        %label.col-sm-2.control-label= f.label :status
+        .col-md-3
+          = f.select :status, options_for_select(['Due', "Overdue", 'Paid']), {}, class: 'form-control select-picker'
+          
+      .form-group
+        .col-sm-offset-2.col-sm-1
+          = link_to content_tag(:i, "", :class => "fa fa-arrow-left ") + " " + t('.back', :default => t("helpers.links.back")), compounds_path, :class => 'btn btn-default'
+        .col-md-2
+          = f.submit "Create", class: "btn btn-primary"

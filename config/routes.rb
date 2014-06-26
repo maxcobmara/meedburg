@@ -1,4 +1,10 @@
 Skeleton::Application.routes.draw do
+  resources :payments
+
+  resources :customers
+
+  resources :compounds
+
   devise_for :users
   resources :users
   

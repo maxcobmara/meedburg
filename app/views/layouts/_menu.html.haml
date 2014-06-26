@@ -2,24 +2,20 @@
   %h2.icon.icon-world Menu
   %ul
     %li.icon.icon-left
-      = link_to "Devices", '#'
+      = link_to "Compounds", '#'
       .mp-level
-        %h2.icon Devices
+        %h2.icon Compounds
         %a.mp-back{:href => "#"} Back
         %ul
-          %li= link_to content_tag(:i, "", :class => "icon-numb") + "Phones", '#'
-          %li= link_to content_tag(:i, "", :class => "icon-numb") + "Cameras", '#'
-          %li= link_to content_tag(:i, "", :class => "icon-numb") + "Tablets", '#'
-          %li= link_to content_tag(:i, "", :class => "icon-numb") + "Televisions", '#'
+          %li= link_to content_tag(:i, "", :class => "icon-numb") + "New", new_compound_path
+          %li= link_to content_tag(:i, "", :class => "icon-numb") + "List", compounds_path
     %li.icon.icon-left
-      = link_to content_tag(:i, "", :class => "icon-numb") + "Books", '#'
+      = link_to content_tag(:i, "", :class => "icon-numb") + "Customers", '#'
       .mp-level
-        %h2.icon Books
+        %h2.icon Customers
         %a.mp-back{:href => "#"} Back
         %ul
-          %li= link_to content_tag(:i, "", :class => "icon-numb") + "Maths", '#'
-          %li= link_to content_tag(:i, "", :class => "icon-numb") + "Science", '#'
-          %li= link_to content_tag(:i, "", :class => "icon-numb") + "Health", '#'
-          %li= link_to content_tag(:i, "", :class => "icon-numb") + "Fiction", '#'
+          %li= link_to content_tag(:i, "", :class => "icon-numb") + "List", customers_path
+
           
         

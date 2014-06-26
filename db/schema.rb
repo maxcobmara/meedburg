@@ -11,7 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130905150104) do
+ActiveRecord::Schema.define(version: 20140626172453) do
+
+  create_table "compounds", force: true do |t|
+    t.string   "compound_code"
+    t.datetime "issued_at"
+    t.string   "location"
+    t.string   "compound_type"
+    t.string   "customer_id"
+    t.decimal  "amount"
+    t.datetime "compound_date"
+    t.string   "description"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "customers", force: true do |t|
+    t.string   "customer_no"
+    t.string   "name"
+    t.text     "address"
+    t.string   "other_customer_no"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "payments", force: true do |t|
+    t.integer  "compound_id"
+    t.decimal  "amount"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Compound code:</strong>
+  <%= @compound.compound_code %>
+</p>
+
+<p>
+  <strong>Issued at:</strong>
+  <%= @compound.issued_at %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @compound.location %>
+</p>
+
+<p>
+  <strong>Compound type:</strong>
+  <%= @compound.compound_type %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @compound.customer_id %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @compound.amount %>
+</p>
+
+<p>
+  <strong>Compound date:</strong>
+  <%= @compound.compound_date %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @compound.description %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @compound.status %>
+</p>
+
+<%= link_to 'Edit', edit_compound_path(@compound) %> |
+<%= link_to 'Back', compounds_path %>

@@ -5,7 +5,6 @@ ruby '2.1.1'
 gem 'rails', '4.1.1'
 gem "thin", "~> 1.6.0"
 gem "devise", "~> 3.1.1"
-gem 'bootstrap-sass', '~> 2.3.2.2'
 gem 'sass-rails', '4.0.0'
 gem 'uglifier', '~> 2.1.1'  # Use Uglifier as compressor for JavaScript assets
 gem 'coffee-rails', '~> 4.0.0'  # Use CoffeeScript for .js.coffee assets and views
@@ -14,7 +13,6 @@ gem 'turbolinks', '~> 1.1.1'  # Turbolinks makes following links in your web app
 gem 'jbuilder', '~> 1.2'  # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem "haml", "~> 4.0.3"
 gem 'font-awesome-rails', '~> 4.1.0.0'
-gem "bootstrap-datepicker-rails", "~> 1.1.1.9"
 gem "bootstrap-select-rails", "~> 1.3.0.1"
 
 group :assets do
@@ -25,6 +23,7 @@ end
 # gem 'therubyracer', platforms: :ruby
 
 group :development, :test do
+  gem 'quiet_assets', '~> 1.0.3'
   gem 'sqlite3', '1.3.8'
   gem "rspec-rails", "~> 2.14.0"
   gem 'guard-rspec', "~> 2.5.0"

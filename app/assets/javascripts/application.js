@@ -12,7 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
-//= require bootstrap-transition
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function(e) {
+  $('.date_time_picker').datetimepicker({
+   	formatDate:'Y-m-d'
+  });
+   
+
+});
