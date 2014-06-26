@@ -1,0 +1,21 @@
+ms_MY:
+  home: 
+    welcome: Selamat Datang ke Skeleton
+    appname: Skeleton
+    email: Email
+    password: Password
+    signin: Sign in
+
+    
+  helpers:
+    links:
+      new: Cipta
+      back: Terdahulu
+  
+  
+  date:
+    formats:
+      default: "%d %B %Y"
+      short: "%d %b"
+      long: "%d %B, %Y"
+      events: "%A, %e %b"
