@@ -52490,3 +52490,27 @@ Processing by CompoundsController#new as HTML
   Rendered layouts/_header.html.haml (0.9ms)
   Rendered layouts/_footer.html.haml (0.4ms)
 Completed 200 OK in 142ms (Views: 117.1ms | ActiveRecord: 24.4ms)
+
+
+Started GET "/compounds?locale=en" for 127.0.0.1 at 2014-06-27 06:02:16 +0800
+Processing by CompoundsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[35mCompound Load (139.0ms)[0m  SELECT "compounds".* FROM "compounds"
+  Rendered compounds/index.html.erb within layouts/application (430.1ms)
+  Rendered layouts/_shim.html.haml (27.3ms)
+  Rendered layouts/_menu.html.haml (103.5ms)
+  Rendered layouts/_header.html.haml (42.2ms)
+  Rendered layouts/_footer.html.haml (7.2ms)
+Completed 200 OK in 1516ms (Views: 1368.1ms | ActiveRecord: 139.0ms)
+
+
+Started GET "/compounds?locale=en" for 127.0.0.1 at 2014-06-27 06:02:18 +0800
+Processing by CompoundsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCompound Load (0.6ms)[0m  [1mSELECT "compounds".* FROM "compounds"[0m
+  Rendered compounds/index.html.erb within layouts/application (61.1ms)
+  Rendered layouts/_shim.html.haml (0.1ms)
+  Rendered layouts/_menu.html.haml (1.2ms)
+  Rendered layouts/_header.html.haml (1.2ms)
+  Rendered layouts/_footer.html.haml (0.6ms)
+Completed 200 OK in 198ms (Views: 196.9ms | ActiveRecord: 0.6ms)
