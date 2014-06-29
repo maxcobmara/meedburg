@@ -1,0 +1,43 @@
+- model_class = Compound
+.page-header
+  %h1 Compounds
+
+.navbar.navbar-inverse{role: "navigation", style: "padding-right:40px;"}
+  %ul.nav.navbar-nav
+    %li= link_to content_tag(:li, fa_icon("asterisk", text: (t 'actions.new'))), new_compound_path
+  %ul.nav.navbar-nav.navbar-right
+    %li.toga= link_to content_tag(:li, fa_icon("search", text: (t 'actions.search'))), "#", class: "bogus"
+    %li= link_to content_tag(:li, fa_icon("print", text: (t 'actions.print'))), "#", class: 'bogus'
+
+%table.table-striped.table-hover.meedburg
+  %thead
+    %tr
+      %th Compound code
+      %th Issued at
+      %th Location
+      %th Compound type
+      %th Customer
+      %th Amount
+      %th Compound date
+      %th Description
+      %th Status
+      %th Pay
+      
+    - @compounds.each do |compound|
+      %tbody
+        %tr
+          %td= compound.compound_code
+          %td= compound.issued_at
+          %td= compound.location
+          %td= compound.compound_type
+          %td= compound.customer_id
+          %td= compound.amount
+          %td= compound.compound_date
+          %td= compound.description
+          %td= compound.status
+          %td= link_to "Pay" , new_payment_path(:compound_id => compound), class: "btn btn-primary"
+
+
+
+
+

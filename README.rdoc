@@ -1,15 +1,19 @@
-== README
+= README
 
-Skeleton App updated for Rails 4 & Ruby 2
+== Meedburg
+Translates to "Pay City"
+Ruby 2.x Rails 4.x
 
-A skeleton application to get you started and ready to roll any sort of app.
-Preconfigured with 
-#Capybara, Selenium, RSpec for Testing
-#Thin Webserver
-#Twitter Bootstrap 2.3 with custom icon helper (bootstrap 3 on another branch)
-#Dual Language
-#Devise authentication with integrated error messages
+== Setting Up
+git clone <this repo>
+cd meedburg
+bundle install
 
+== Contributing
+just a prototype ignore for now
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+== License
+DBAD Public License v1.0
+http://www.dbad-license.org/
+
+Licenses for libraries to their respective owners

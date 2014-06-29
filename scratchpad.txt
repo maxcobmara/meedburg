@@ -1,0 +1,7 @@
+scaffold
+
+rails generate scaffold Compound compound_code:string issued_at:datetime location:string compound_type:string customer_id:string amount:decimal compound_date:datetime description:string status:string
+
+rails generate scaffold Customer customer_no:string name:string address:text other_customer_no:string
+
+rails generate scaffold Payment compound_id:integer amount:decimal

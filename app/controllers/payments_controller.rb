@@ -14,7 +14,9 @@ class PaymentsController < ApplicationController
 
   # GET /payments/new
   def new
-    @payment = Payment.new
+    @compound = Compound.find(params[:compound_id])
+    @payment = @compound.payments.new(params[:payment])
+    @payment.save
   end
 
   # GET /payments/1/edit
@@ -23,19 +25,19 @@ class PaymentsController < ApplicationController
 
   # POST /payments
   # POST /payments.json
-  def create
-    @payment = Payment.new(payment_params)
-
-    respond_to do |format|
-      if @payment.save
-        format.html { redirect_to @payment, notice: 'Payment was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @payment }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @payment.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+#  def create
+#    @payment = Payment.new(payment_params)
+#
+#    respond_to do |format|
+#      if @payment.save
+#        format.html { redirect_to @payment, notice: 'Payment was successfully created.' }
+#        format.json { render action: 'show', status: :created, location: @payment }
+#      else
+#        format.html { render action: 'new' }
+#        format.json { render json: @payment.errors, status: :unprocessable_entity }
+#      end
+#    end
+#  end
 
   # PATCH/PUT /payments/1
   # PATCH/PUT /payments/1.json

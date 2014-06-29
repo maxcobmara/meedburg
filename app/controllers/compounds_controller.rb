@@ -69,6 +69,6 @@ class CompoundsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def compound_params
-      params.require(:compound).permit(:compound_code, :issued_at, :location, :compound_type, :customer_id, :amount, :compound_date, :description, :status)
+      params.require(:compound).permit(:compound_code, :issued_at, :location, :compound_type, :customer_id, :amount, :compound_date, :description, :status, payment_attributes: [:id, :compound_id, :amount])
     end
 end

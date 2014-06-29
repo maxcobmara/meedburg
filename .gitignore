@@ -1,0 +1,30 @@
+# Ignore bundler config
+/.bundle
+
+#Ignore Configs
+Gemfile.lock
+# config/database.yml only add when pass prototype
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+
+# Ignore other unneeded files.
+doc/
+*.swp
+*~
+.project
+.DS_Store
+bundler_stubs/
+*.orig
+
+
+.backup
+db/migrate/bin/*
+public/assets/**
+public/system/**
+tmp/
+tmp/**/*

@@ -20,6 +20,10 @@ $(document).ready(function(e) {
   $('.date_time_picker').datetimepicker({
    	formatDate:'Y-m-d'
   });
+  
+  $(".bogus").click(function (e) {
+      alert("Sorry! Feature not yet implemented");
+  });
    
 
 });
